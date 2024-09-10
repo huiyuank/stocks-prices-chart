@@ -4,30 +4,46 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-rgb: 75 85 99 / 80%;
+    --input-rgb: 17 24 39 / 0.5;
+    --text-color-primary-rgb: 243 244 246 / var(--tw-text-opacity);
+  }
+
+  input {
+    color-scheme: dark;
+    background-color: rgb(var(--input-rgb));
+    color: rgb(var(--text-color-primary-rgb));
   }
 }
 
-body {
+.page-container {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@layer base {
+  h1 {
+    @apply text-lg font-semibold;
+  }
+  h2 {
+    @apply text-sm font-normal;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .input {
+    height: 2.5em;
+    border-radius: 0.5em;
+    border: 1px solid rgb(31 41 55 / 0.5);
   }
 }

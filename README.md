@@ -34,3 +34,43 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Wireframe
+
+- Nav bar: Settings and account matters
+- Side bar: Links to other sub pages
+- Main content: D3 charts
+
+## Components
+
+- Inputs
+  - Multiselect
+  - Date picker
+  - Toggle
+- Line plot
+
+## Project tasks
+
+1. Fetching of data
+2. Rendering multi-line chart
+3. Input filter/selection -> MVC
+   a. Stocks (up to 3) from US Exchange
+   b. Date range
+   c. Open/close/low/high display
+
+## Unit testing
+
+- Configure with Jest and React testing library
+- Write tests in `__tests__` folder
+
+Run test command in CLI:
+
+```bash
+npm run test
+# or
+yarn test
+# or
+pnpm test
+# or
+bun test
+```
